@@ -130,4 +130,72 @@ declare global {
   }
 }
 
+
+declare global {
+
+  namespace StencilComponents {
+    interface MyFirstComponent {
+      'name': string;
+    }
+  }
+
+  interface HTMLMyFirstComponentElement extends StencilComponents.MyFirstComponent, HTMLStencilElement {}
+
+  var HTMLMyFirstComponentElement: {
+    prototype: HTMLMyFirstComponentElement;
+    new (): HTMLMyFirstComponentElement;
+  };
+  interface HTMLElementTagNameMap {
+    'my-first-component': HTMLMyFirstComponentElement;
+  }
+  interface ElementTagNameMap {
+    'my-first-component': HTMLMyFirstComponentElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'my-first-component': JSXElements.MyFirstComponentAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyFirstComponentAttributes extends HTMLAttributes {
+      'name'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MyMercedes {
+      'marke': string;
+      'preis': number;
+    }
+  }
+
+  interface HTMLMyMercedesElement extends StencilComponents.MyMercedes, HTMLStencilElement {}
+
+  var HTMLMyMercedesElement: {
+    prototype: HTMLMyMercedesElement;
+    new (): HTMLMyMercedesElement;
+  };
+  interface HTMLElementTagNameMap {
+    'my-mercedes': HTMLMyMercedesElement;
+  }
+  interface ElementTagNameMap {
+    'my-mercedes': HTMLMyMercedesElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'my-mercedes': JSXElements.MyMercedesAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyMercedesAttributes extends HTMLAttributes {
+      'marke'?: string;
+      'preis'?: number;
+    }
+  }
+}
+
 declare global { namespace JSX { interface StencilJSX {} } }

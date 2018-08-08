@@ -3,7 +3,8 @@ import { Component, Prop } from '@stencil/core';
 
 @Component({
     tag: 'my-mercedes',
-    styleUrl: 'my-mercedes.scss'
+    styleUrl: 'my-mercedes.scss',
+
 
 })
 
@@ -16,6 +17,7 @@ export class MyAuto {
     autos = [
         { marke: "Mercedes", preis: 100500 },
         { marke: "Volkswagen", preis: 200000 },
+        { marke: "Audi", preis: 500100 },
         { marke: "Audi", preis: 500100 }
     ]
 
@@ -41,8 +43,7 @@ export class MyAuto {
             </p>*/
 
             <div>
-                {this.autos.map((autoliste) =>
-
+                
                     <table class="mytable">
 
                         <thead>
@@ -51,18 +52,30 @@ export class MyAuto {
                                 <th>Preis</th>
                             </tr>
                         </thead>
+{this.autos.map((autoliste) =>
 
                         <tbody>
                             <th>{autoliste.marke}</th>
                             <th>{autoliste.preis}</th>
                         </tbody>
+                        )}
                     </table>
-                )}
+                
+                <div>
+                    <button class="mybutton">KlickMe1</button>
+                    <button class="mybutton">KlickMe2</button>
+                    <button class="mybutton">KlickMe3</button>
+                </div>
 
-            </div >
 
+        
 
+                     
+            <div>
+            <button class = "mybutton">KlickMe1</button>
+            </div>
 
+            </div>
 
         );
     }

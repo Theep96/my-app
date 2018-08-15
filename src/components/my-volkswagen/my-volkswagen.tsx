@@ -3,20 +3,20 @@ import { Component, Prop } from "@stencil/core";
 
 
 @Component({
-    tag: 'my-mercedes',
-    styleUrl: 'my-mercedes.scss'
+    tag: 'my-volkswagen',
+    styleUrl: 'my-volkswagen.scss'
 })
 
 
-export class MyMercedes {
+export class MyVolkswagen {
 
     @Prop() marke: string;
     @Prop() preis: number;
-    @Prop() istNeu: boolean;
+    @Prop() istNeu: boolean = false;
 
 
-    mercedes = [
-        { marke: "Mercedes", preis: 100500, istNeu: true }
+    volkswagen = [
+        { marke: "Volkswagen", preis: 200000, istNeu: false }
     ]
 
 
@@ -28,18 +28,18 @@ export class MyMercedes {
             <div>
                 <table class="merctable">
                     <caption>
-                        <h1>Details zu Mercedes</h1>
+                        <h1>Details zu Volkswagen</h1>
                     </caption>
 
-                    {this.mercedes.map((mercliste) =>
+                    {this.volkswagen.map((vwliste) =>
 
                         <tbody>
-                            <th>{mercliste.marke}</th>
-                            <th>{mercliste.preis}</th>
+                            <th>{vwliste.marke}</th>
+                            <th>{vwliste.preis}</th>
 
                             <tr>
                                 <th>Neu</th>
-                                <th>{mercliste.istNeu}</th>
+                                <th>{vwliste.istNeu}</th>
                             </tr>
                         </tbody>
                     )}

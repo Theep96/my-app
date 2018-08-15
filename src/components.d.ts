@@ -28,37 +28,71 @@ declare global {
 import '@stencil/router';
 import '@stencil/state-tunnel';
 
-import {
-  MatchResults,
-} from '@stencil/router';
 
 declare global {
 
   namespace StencilComponents {
-    interface AppHome {
-
+    interface MyAudi {
+      'istNeu': boolean;
+      'marke': string;
+      'preis': number;
     }
   }
 
-  interface HTMLAppHomeElement extends StencilComponents.AppHome, HTMLStencilElement {}
+  interface HTMLMyAudiElement extends StencilComponents.MyAudi, HTMLStencilElement {}
 
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
+  var HTMLMyAudiElement: {
+    prototype: HTMLMyAudiElement;
+    new (): HTMLMyAudiElement;
   };
   interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
+    'my-audi': HTMLMyAudiElement;
   }
   interface ElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
+    'my-audi': HTMLMyAudiElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'app-home': JSXElements.AppHomeAttributes;
+      'my-audi': JSXElements.MyAudiAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppHomeAttributes extends HTMLAttributes {
+    export interface MyAudiAttributes extends HTMLAttributes {
+      'istNeu'?: boolean;
+      'marke'?: string;
+      'preis'?: number;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MyAutoapp {
+
+    }
+  }
+
+  interface HTMLMyAutoappElement extends StencilComponents.MyAutoapp, HTMLStencilElement {}
+
+  var HTMLMyAutoappElement: {
+    prototype: HTMLMyAutoappElement;
+    new (): HTMLMyAutoappElement;
+  };
+  interface HTMLElementTagNameMap {
+    'my-autoapp': HTMLMyAutoappElement;
+  }
+  interface ElementTagNameMap {
+    'my-autoapp': HTMLMyAutoappElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'my-autoapp': JSXElements.MyAutoappAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyAutoappAttributes extends HTMLAttributes {
 
     }
   }
@@ -68,31 +102,36 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface AppProfile {
-      'match': MatchResults;
+    interface MyAutos {
+      'autos': any;
+      'marke': string;
+      'preis': number;
+      'showPrompt': () => void;
     }
   }
 
-  interface HTMLAppProfileElement extends StencilComponents.AppProfile, HTMLStencilElement {}
+  interface HTMLMyAutosElement extends StencilComponents.MyAutos, HTMLStencilElement {}
 
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
+  var HTMLMyAutosElement: {
+    prototype: HTMLMyAutosElement;
+    new (): HTMLMyAutosElement;
   };
   interface HTMLElementTagNameMap {
-    'app-profile': HTMLAppProfileElement;
+    'my-autos': HTMLMyAutosElement;
   }
   interface ElementTagNameMap {
-    'app-profile': HTMLAppProfileElement;
+    'my-autos': HTMLMyAutosElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'app-profile': JSXElements.AppProfileAttributes;
+      'my-autos': JSXElements.MyAutosAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppProfileAttributes extends HTMLAttributes {
-      'match'?: MatchResults;
+    export interface MyAutosAttributes extends HTMLAttributes {
+      'autos'?: any;
+      'marke'?: string;
+      'preis'?: number;
     }
   }
 }
@@ -101,64 +140,31 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface AppRoot {
+    interface MyButtons {
 
     }
   }
 
-  interface HTMLAppRootElement extends StencilComponents.AppRoot, HTMLStencilElement {}
+  interface HTMLMyButtonsElement extends StencilComponents.MyButtons, HTMLStencilElement {}
 
-  var HTMLAppRootElement: {
-    prototype: HTMLAppRootElement;
-    new (): HTMLAppRootElement;
+  var HTMLMyButtonsElement: {
+    prototype: HTMLMyButtonsElement;
+    new (): HTMLMyButtonsElement;
   };
   interface HTMLElementTagNameMap {
-    'app-root': HTMLAppRootElement;
+    'my-buttons': HTMLMyButtonsElement;
   }
   interface ElementTagNameMap {
-    'app-root': HTMLAppRootElement;
+    'my-buttons': HTMLMyButtonsElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'app-root': JSXElements.AppRootAttributes;
+      'my-buttons': JSXElements.MyButtonsAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppRootAttributes extends HTMLAttributes {
+    export interface MyButtonsAttributes extends HTMLAttributes {
 
-    }
-  }
-}
-
-
-declare global {
-
-  namespace StencilComponents {
-    interface MyFirstComponent {
-      'name': string;
-    }
-  }
-
-  interface HTMLMyFirstComponentElement extends StencilComponents.MyFirstComponent, HTMLStencilElement {}
-
-  var HTMLMyFirstComponentElement: {
-    prototype: HTMLMyFirstComponentElement;
-    new (): HTMLMyFirstComponentElement;
-  };
-  interface HTMLElementTagNameMap {
-    'my-first-component': HTMLMyFirstComponentElement;
-  }
-  interface ElementTagNameMap {
-    'my-first-component': HTMLMyFirstComponentElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      'my-first-component': JSXElements.MyFirstComponentAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface MyFirstComponentAttributes extends HTMLAttributes {
-      'name'?: string;
     }
   }
 }
@@ -168,6 +174,7 @@ declare global {
 
   namespace StencilComponents {
     interface MyMercedes {
+      'istNeu': boolean;
       'marke': string;
       'preis': number;
     }
@@ -192,6 +199,44 @@ declare global {
   }
   namespace JSXElements {
     export interface MyMercedesAttributes extends HTMLAttributes {
+      'istNeu'?: boolean;
+      'marke'?: string;
+      'preis'?: number;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface MyVolkswagen {
+      'istNeu': boolean;
+      'marke': string;
+      'preis': number;
+    }
+  }
+
+  interface HTMLMyVolkswagenElement extends StencilComponents.MyVolkswagen, HTMLStencilElement {}
+
+  var HTMLMyVolkswagenElement: {
+    prototype: HTMLMyVolkswagenElement;
+    new (): HTMLMyVolkswagenElement;
+  };
+  interface HTMLElementTagNameMap {
+    'my-volkswagen': HTMLMyVolkswagenElement;
+  }
+  interface ElementTagNameMap {
+    'my-volkswagen': HTMLMyVolkswagenElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'my-volkswagen': JSXElements.MyVolkswagenAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyVolkswagenAttributes extends HTMLAttributes {
+      'istNeu'?: boolean;
       'marke'?: string;
       'preis'?: number;
     }

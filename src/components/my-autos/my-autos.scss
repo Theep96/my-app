@@ -1,4 +1,4 @@
-.merctable, th, td, thead, tbody {
+.mytable, th, td, thead, tbody {
     border: 1px solid gray;
     width: 50%;
     margin: 0 auto;
@@ -6,14 +6,14 @@
     
 }
 
- .merctable thead {
+ .mytable thead {
     background-color: lightgray;
 }
 
-.merctable th {
+.mytable th {
     text-align: center;
 }
 
-h1{
-    text-align: center;
-}
+
+
+

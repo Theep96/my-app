@@ -10,7 +10,7 @@ console.log("autoapp ausgeführt");
 })
 
 export class MyAutoapp {
-    render() {
+    render() { 
 
         console.log("im render");
 

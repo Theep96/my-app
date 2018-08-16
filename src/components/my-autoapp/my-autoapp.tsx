@@ -14,7 +14,7 @@ export class MyAutoapp {
 
         console.log("im render");
 
-        return (
+        return ( 
             <auto-app>
 
                 <h1> AutoApp </h1>
